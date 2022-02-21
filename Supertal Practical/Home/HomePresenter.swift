@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomePresentationLogic {
-    func presentSomething(response: Home.Something.Response)
+    func presentUserList(response: Home.UserList.Response)
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -17,9 +17,9 @@ class HomePresenter: HomePresentationLogic {
 
     // MARK: Parse and calc respnse from HomeInteractor and send simple view model to HomeViewController to be displayed
 
-    func presentSomething(response: Home.Something.Response) {
-        let viewModel = Home.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentUserList(response: Home.UserList.Response) {
+        let viewModel = Home.UserList.ViewModel(userDetails: response.userDetails)
+        viewController?.displayUserList(viewModel: viewModel)
     }
 //
 //    func presentSomethingElse(response: Home.SomethingElse.Response) {

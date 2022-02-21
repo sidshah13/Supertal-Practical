@@ -13,21 +13,21 @@ enum Home
 {
     // MARK: Use cases
 
-    enum Something
+    enum UserList
     {
         struct Request
         {
-
+            let path:String
         }
 
         struct Response
         {
-
+            var userDetails: [UserListModel]
         }
 
         struct ViewModel
         {
-
+            var userDetails: [UserListModel]
         }
     }
     

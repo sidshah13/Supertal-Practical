@@ -9,7 +9,8 @@
 import Foundation
 
 import UIKit
-
+let baseURL = "https://6212122501ccdac074314800.mockapi.io/"
+let userData = "userData"
 extension UIView {
     @IBInspectable
     var cornerRadius: CGFloat {

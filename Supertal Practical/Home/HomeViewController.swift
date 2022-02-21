@@ -11,7 +11,7 @@ import UIKit
 
 protocol HomeDisplayLogic: AnyObject
 {
-    func displaySomething(viewModel: Home.Something.ViewModel)
+    func displayUserList(viewModel: Home.UserList.ViewModel)
 //    func displaySomethingElse(viewModel: Home.SomethingElse.ViewModel)
 }
 
@@ -19,7 +19,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     @IBOutlet weak var tblUserList: UITableView!
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
-
+    var arrUsers = [UserListModel]()
     // MARK: Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -67,7 +67,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         self.tblUserList.register(UINib(nibName: "HomeUserListTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeUserListTableViewCell")
         self.tblUserList.delegate = self
                 self.tblUserList.dataSource = self
-        doSomething()
+        fetchUserDataFromServer()
 //        doSomethingElse()
     }
     
@@ -85,9 +85,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     // MARK: - request data from HomeInteractor
 
-    func doSomething() {
-        let request = Home.Something.Request()
-        interactor?.doSomething(request: request)
+    func fetchUserDataFromServer() {
+        let request = Home.UserList.Request(path: baseURL+userData)
+        interactor?.FetchUserList(request: request)
     }
 //
 //    func doSomethingElse() {
@@ -97,8 +97,13 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 
     // MARK: - display view model from HomePresenter
 
-    func displaySomething(viewModel: Home.Something.ViewModel) {
+    func displayUserList(viewModel: Home.UserList.ViewModel) {
         //nameTextField.text = viewModel.name
+        DispatchQueue.main.async {
+            self.arrUsers.removeAll()
+            self.arrUsers = viewModel.userDetails
+            self.tblUserList.reloadData()
+        }
     }
 //
 //    func displaySomethingElse(viewModel: Home.SomethingElse.ViewModel) {
@@ -108,11 +113,12 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.arrUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeUserListTableViewCell") as? HomeUserListTableViewCell
+        cell?.setUserData(self.arrUsers[indexPath.row])
         return cell!
     }
     

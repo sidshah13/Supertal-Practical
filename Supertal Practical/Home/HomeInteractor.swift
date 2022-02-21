@@ -10,27 +10,31 @@
 import UIKit
 
 protocol HomeBusinessLogic {
-    func doSomething(request: Home.Something.Request)
+    func FetchUserList(request: Home.UserList.Request)
 //    func doSomethingElse(request: Home.SomethingElse.Request)
 }
 
 protocol HomeDataStore {
     //var name: String { get set }
+    var userList: [UserListModel]? { get }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     var presenter: HomePresentationLogic?
     var worker: HomeWorker?
+    var userList: [UserListModel]?
     //var name: String = ""
 
     // MARK: Do something (and send response to HomePresenter)
 
-    func doSomething(request: Home.Something.Request) {
+    func FetchUserList(request: Home.UserList.Request) {
         worker = HomeWorker()
-        worker?.doSomeWork()
-
-        let response = Home.Something.Response()
-        presenter?.presentSomething(response: response)
+        worker?.getUserDetails(request: request.path, completionHandler: { arrUser in
+            let response = Home.UserList.Response(userDetails: arrUser)
+            self.presenter?.presentUserList(response: response)
+        })
+        
+        
     }
 //
 //    func doSomethingElse(request: Home.SomethingElse.Request) {
