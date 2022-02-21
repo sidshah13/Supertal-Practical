@@ -25,6 +25,13 @@
 		A79B83A527C3A2FC00D212D0 /* HomeUserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B83A327C3A2FC00D212D0 /* HomeUserListTableViewCell.swift */; };
 		A79B83A627C3A2FC00D212D0 /* HomeUserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79B83A427C3A2FC00D212D0 /* HomeUserListTableViewCell.xib */; };
 		A79B83A927C3AC2300D212D0 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B83A827C3AC2300D212D0 /* Extentions.swift */; };
+		A79B83AC27C3BB8500D212D0 /* UserListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B83AB27C3BB8500D212D0 /* UserListModel.swift */; };
+		A7BF847027C3ED3A0063FDFF /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF846A27C3ED3A0063FDFF /* UserDetailPresenter.swift */; };
+		A7BF847127C3ED3A0063FDFF /* UserDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF846B27C3ED3A0063FDFF /* UserDetailWorker.swift */; };
+		A7BF847227C3ED3A0063FDFF /* UserDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF846C27C3ED3A0063FDFF /* UserDetailRouter.swift */; };
+		A7BF847327C3ED3A0063FDFF /* UserDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF846D27C3ED3A0063FDFF /* UserDetailModels.swift */; };
+		A7BF847427C3ED3A0063FDFF /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF846E27C3ED3A0063FDFF /* UserDetailViewController.swift */; };
+		A7BF847527C3ED3A0063FDFF /* UserDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF846F27C3ED3A0063FDFF /* UserDetailInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +75,13 @@
 		A79B83A327C3A2FC00D212D0 /* HomeUserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserListTableViewCell.swift; sourceTree = "<group>"; };
 		A79B83A427C3A2FC00D212D0 /* HomeUserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeUserListTableViewCell.xib; sourceTree = "<group>"; };
 		A79B83A827C3AC2300D212D0 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		A79B83AB27C3BB8500D212D0 /* UserListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListModel.swift; sourceTree = "<group>"; };
+		A7BF846A27C3ED3A0063FDFF /* UserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
+		A7BF846B27C3ED3A0063FDFF /* UserDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailWorker.swift; sourceTree = "<group>"; };
+		A7BF846C27C3ED3A0063FDFF /* UserDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRouter.swift; sourceTree = "<group>"; };
+		A7BF846D27C3ED3A0063FDFF /* UserDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailModels.swift; sourceTree = "<group>"; };
+		A7BF846E27C3ED3A0063FDFF /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		A7BF846F27C3ED3A0063FDFF /* UserDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailInteractor.swift; sourceTree = "<group>"; };
 		D5453E5A53825824F83CF218 /* Pods-Supertal Practical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Supertal Practical.debug.xcconfig"; path = "Target Support Files/Pods-Supertal Practical/Pods-Supertal Practical.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +125,6 @@
 				D5453E5A53825824F83CF218 /* Pods-Supertal Practical.debug.xcconfig */,
 				40DFE2BF197D0565E1945419 /* Pods-Supertal Practical.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,8 +153,9 @@
 		A79B836527C39E8500D212D0 /* Supertal Practical */ = {
 			isa = PBXGroup;
 			children = (
+				A7BF846927C3ECFE0063FDFF /* Screens */,
+				A79B83AA27C3BB7300D212D0 /* Model */,
 				A79B83A727C3ABC800D212D0 /* Global */,
-				A79B83A227C39F5F00D212D0 /* Home */,
 				A79B836627C39E8500D212D0 /* AppDelegate.swift */,
 				A79B836827C39E8500D212D0 /* SceneDelegate.swift */,
 				A79B836C27C39E8500D212D0 /* Main.storyboard */,
@@ -190,6 +204,36 @@
 				A79B83A827C3AC2300D212D0 /* Extentions.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		A79B83AA27C3BB7300D212D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A79B83AB27C3BB8500D212D0 /* UserListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A7BF846827C3ECDE0063FDFF /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A7BF846A27C3ED3A0063FDFF /* UserDetailPresenter.swift */,
+				A7BF846B27C3ED3A0063FDFF /* UserDetailWorker.swift */,
+				A7BF846C27C3ED3A0063FDFF /* UserDetailRouter.swift */,
+				A7BF846D27C3ED3A0063FDFF /* UserDetailModels.swift */,
+				A7BF846E27C3ED3A0063FDFF /* UserDetailViewController.swift */,
+				A7BF846F27C3ED3A0063FDFF /* UserDetailInteractor.swift */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		A7BF846927C3ECFE0063FDFF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A79B83A227C39F5F00D212D0 /* Home */,
+				A7BF846827C3ECDE0063FDFF /* UserDetail */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,14 +415,21 @@
 			files = (
 				A79B839E27C39ED300D212D0 /* HomeRouter.swift in Sources */,
 				A79B836727C39E8500D212D0 /* AppDelegate.swift in Sources */,
+				A79B83AC27C3BB8500D212D0 /* UserListModel.swift in Sources */,
 				A79B83A927C3AC2300D212D0 /* Extentions.swift in Sources */,
 				A79B83A027C39ED300D212D0 /* HomeViewController.swift in Sources */,
 				A79B83A527C3A2FC00D212D0 /* HomeUserListTableViewCell.swift in Sources */,
+				A7BF847227C3ED3A0063FDFF /* UserDetailRouter.swift in Sources */,
+				A7BF847027C3ED3A0063FDFF /* UserDetailPresenter.swift in Sources */,
 				A79B836927C39E8500D212D0 /* SceneDelegate.swift in Sources */,
 				A79B839D27C39ED300D212D0 /* HomeWorker.swift in Sources */,
+				A7BF847427C3ED3A0063FDFF /* UserDetailViewController.swift in Sources */,
 				A79B83A127C39ED300D212D0 /* HomeInteractor.swift in Sources */,
 				A79B839C27C39ED300D212D0 /* HomePresenter.swift in Sources */,
+				A7BF847127C3ED3A0063FDFF /* UserDetailWorker.swift in Sources */,
 				A79B839F27C39ED300D212D0 /* HomeModels.swift in Sources */,
+				A7BF847527C3ED3A0063FDFF /* UserDetailInteractor.swift in Sources */,
+				A7BF847327C3ED3A0063FDFF /* UserDetailModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +618,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,6 +649,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
