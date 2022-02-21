@@ -15,6 +15,7 @@ class HomeUserListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.imgUserProfile.contentMode = .scaleAspectFill
+        self.imgUserProfile.backgroundColor = .random()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

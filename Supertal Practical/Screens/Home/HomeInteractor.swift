@@ -16,7 +16,7 @@ protocol HomeBusinessLogic {
 
 protocol HomeDataStore {
     //var name: String { get set }
-    var userList: [UserListModel]? { get }
+    var userList: [UserListModel]? { get set }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
@@ -30,6 +30,7 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     func FetchUserList(request: Home.UserList.Request) {
         worker = HomeWorker()
         worker?.getUserDetails(request: request.path, completionHandler: { arrUser in
+            self.userList = arrUser
             let response = Home.UserList.Response(userDetails: arrUser)
             self.presenter?.presentUserList(response: response)
         })

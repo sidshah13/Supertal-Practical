@@ -71,7 +71,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 //        doSomethingElse()
     }
     
-    //MARK: - receive events from UI
+    // MARK: - receive events from UI
     
     //@IBOutlet weak var nameTextField: UITextField!
 //
@@ -121,6 +121,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.setUserData(self.arrUsers[indexPath.row])
         return cell!
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.routeToUserDetailScreen()
+    }
     
 }

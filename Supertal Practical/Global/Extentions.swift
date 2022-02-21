@@ -103,3 +103,39 @@ extension UIView {
         self.layer.shadowRadius = 5
     }
 }
+extension UIColor {
+    /**
+     Creates a method to fetch Hex color to UIColor
+     - Parameter rgb: Hex Code as UInt
+     - Author: Siddharth Shah
+     @objc    */
+    convenience init(rgb: UInt) {
+        self.init(
+            red: CGFloat((rgb & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgb & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgb & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+    static func random() -> UIColor {
+        return UIColor(
+            red:   .random(),
+            green: .random(),
+            blue:  .random(),
+            alpha: 1.0
+        )
+    }
+    var isDarkColor: Bool {
+        var r, g, b, a: CGFloat
+        (r, g, b, a) = (0, 0, 0, 0)
+        self.getRed(&r, green: &g, blue: &b, alpha: &a)
+        let lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
+        return  lum < 0.50
+    }
+}
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
