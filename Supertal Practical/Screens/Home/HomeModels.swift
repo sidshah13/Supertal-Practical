@@ -9,43 +9,20 @@
 
 import UIKit
 
-enum Home
-{
+enum Home {
+    
     // MARK: Use cases
-
-    enum UserList
-    {
-        struct Request
-        {
+    enum UserList {
+        struct Request {
             let path:String
         }
-
-        struct Response
-        {
+        
+        struct Response {
             var userDetails: [UserListModel]
         }
-
-        struct ViewModel
-        {
+        
+        struct ViewModel {
             var userDetails: [UserListModel]
         }
     }
-    
-//    enum SomethingElse
-//    {
-//        struct Request
-//        {
-//
-//        }
-//
-//        struct Response
-//        {
-//
-//        }
-//
-//        struct ViewModel
-//        {
-//
-//        }
-//    }
 }

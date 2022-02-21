@@ -22,7 +22,6 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     var presenter: HomePresentationLogic?
     var worker: HomeWorker?
     var userList: [UserListModel]?
-    //var name: String = ""
 
     // MARK: Do something (and send response to HomePresenter)
 
@@ -36,12 +35,4 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         
         
     }
-//
-//    func doSomethingElse(request: Home.SomethingElse.Request) {
-//        worker = HomeWorker()
-//        worker?.doSomeOtherWork()
-//
-//        let response = Home.SomethingElse.Response()
-//        presenter?.presentSomethingElse(response: response)
-//    }
 }

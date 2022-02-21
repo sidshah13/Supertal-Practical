@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol UserDetailRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    
 }
 
 protocol UserDetailDataPassing {

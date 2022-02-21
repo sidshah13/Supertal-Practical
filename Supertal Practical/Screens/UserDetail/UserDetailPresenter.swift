@@ -15,7 +15,8 @@ protocol UserDetailPresentationLogic {
 class UserDetailPresenter: UserDetailPresentationLogic {
     weak var viewController: UserDetailDisplayLogic?
 
-    // MARK: Parse and calc respnse from UserDetailInteractor and send simple view model to UserDetailViewController to be displayed
+    // MARK: Parse and calc respnse from UserDetailInteractor
+    // and send simple view model to UserDetailViewController to be displayed
 
     func presentUserDetail(response: UserDetail.userDetail.Response) {
         let viewModel = UserDetail.userDetail.ViewModel(userDetail: response.userDetail)

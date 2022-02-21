@@ -14,15 +14,11 @@ protocol HomePresentationLogic {
 class HomePresenter: HomePresentationLogic {
     weak var viewController: HomeDisplayLogic?
 
-    // MARK: Parse and calc respnse from HomeInteractor and send simple view model to HomeViewController to be displayed
+    // MARK: Parse and calc respnse from HomeInteractor
+    // and send simple view model to HomeViewController to be displayed
 
     func presentUserList(response: Home.UserList.Response) {
         let viewModel = Home.UserList.ViewModel(userDetails: response.userDetails)
         viewController?.displayUserList(viewModel: viewModel)
     }
-//
-//    func presentSomethingElse(response: Home.SomethingElse.Response) {
-//        let viewModel = Home.SomethingElse.ViewModel()
-//        viewController?.displaySomethingElse(viewModel: viewModel)
-//    }
 }

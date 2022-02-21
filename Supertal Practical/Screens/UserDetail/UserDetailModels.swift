@@ -8,24 +8,18 @@
 
 import UIKit
 
-enum UserDetail
-{
+enum UserDetail {
     // MARK: Use cases
-
-    enum userDetail
-    {
-        struct Request
-        {
-
+    
+    enum userDetail {
+        struct Request {
         }
-
-        struct Response
-        {
+        
+        struct Response {
             var userDetail: UserListModel
         }
-
-        struct ViewModel
-        {
+        
+        struct ViewModel {
             var userDetail: UserListModel
         }
     }
