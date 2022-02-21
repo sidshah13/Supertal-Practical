@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
     var arrUsers = [UserListModel]()
-    var reusableCellIdentifer = "HomeUserListTableViewCell"
+    var reuseCellId = "HomeUserListTableViewCell"
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -60,8 +60,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tblUserList.register(UINib(nibName: reusableCellIdentifer, bundle: nil), forCellReuseIdentifier: reusableCellIdentifer)
+        let cellNib = UINib(nibName: reuseCellId, bundle: nil)
+        self.tblUserList.register(cellNib,
+                                  forCellReuseIdentifier: reuseCellId)
         self.tblUserList.delegate = self
         self.tblUserList.dataSource = self
         fetchUserDataFromServer()
@@ -91,7 +92,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reusableCellIdentifer) as? HomeUserListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseCellId) as? HomeUserListTableViewCell
         cell?.setUserData(self.arrUsers[indexPath.row])
         return cell!
     }

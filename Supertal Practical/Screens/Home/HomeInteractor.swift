@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeBusinessLogic {
-    func FetchUserList(request: Home.UserList.Request)
+    func fetchUserList(request: Home.UserList.Request)
 //    func doSomethingElse(request: Home.SomethingElse.Request)
 }
 

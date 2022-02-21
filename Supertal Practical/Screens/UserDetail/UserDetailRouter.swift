@@ -9,7 +9,6 @@
 import UIKit
 
 @objc protocol UserDetailRoutingLogic {
-    
 }
 
 protocol UserDetailDataPassing {
