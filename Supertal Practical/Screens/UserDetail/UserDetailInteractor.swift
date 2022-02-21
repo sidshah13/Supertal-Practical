@@ -9,7 +9,7 @@
 import UIKit
 
 protocol UserDetailBusinessLogic {
-    func getUserDetail(request: UserDetail.userDetail.Request)
+    func getUserDetail(request: UserDetail.UserDetailEnum.Request)
 }
 
 protocol UserDetailDataStore {
@@ -25,11 +25,11 @@ class UserDetailInteractor: UserDetailBusinessLogic, UserDetailDataStore {
     
     // MARK: Do something (and send response to UserDetailPresenter)
 
-    func getUserDetail(request: UserDetail.userDetail.Request) {
+    func getUserDetail(request: UserDetail.UserDetailEnum.Request) {
         worker = UserDetailWorker()
         worker?.userDetail()
 
-        let response = UserDetail.userDetail.Response(userDetail: userDetail)
+        let response = UserDetail.UserDetailEnum.Response(userDetail: userDetail)
         presenter?.presentUserDetail(response: response)
     }
 }

@@ -19,10 +19,10 @@ protocol HomeDataPassing {
 class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
     weak var viewController: HomeViewController?
     var dataStore: HomeDataStore?
-    
     // MARK: Routing (navigating to other screens)
     func routeToUserDetailScreen() {
-        let destinationVC = viewController?.storyboard?.instantiateViewController(withIdentifier: "UserDetailViewController") as! UserDetailViewController
+        let strVCId = "UserDetailViewController"
+        let destinationVC = viewController?.storyboard?.instantiateViewController(withIdentifier: strVCId) as! UserDetailViewController
         var destinationDS = destinationVC.router!.dataStore!
         passDataToUserDetail(source: dataStore!, destination: &destinationDS)
         navigateToShowOrder(source: viewController!, destination: destinationVC)

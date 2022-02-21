@@ -19,20 +19,19 @@ protocol HomeDataStore {
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
+    
     var presenter: HomePresentationLogic?
     var worker: HomeWorker?
     var userList: [UserListModel]?
 
     // MARK: Do something (and send response to HomePresenter)
 
-    func FetchUserList(request: Home.UserList.Request) {
+    func fetchUserList(request: Home.UserList.Request) {
         worker = HomeWorker()
         worker?.getUserDetails(request: request.path, completionHandler: { arrUser in
             self.userList = arrUser
             let response = Home.UserList.Response(userDetails: arrUser)
             self.presenter?.presentUserList(response: response)
         })
-        
-        
     }
 }

@@ -24,7 +24,10 @@ class HomeUserListTableViewCell: UITableViewCell {
     
     func setUserData(_ obj: UserListModel) {
         self.lblUserName.text = obj.userName
-        self.imgUserProfile.sd_setImage(with: URL(string: obj.userImage), placeholderImage: UIImage(systemName: "userloading"))
+        let imgUrl = URL(string:  obj.userImage)
+        let placeHolderImage =  UIImage(systemName: "userloading")
+        self.imgUserProfile.sd_setImage(with: imgUrl,
+                                        placeholderImage: placeHolderImage)
     }
     
 }

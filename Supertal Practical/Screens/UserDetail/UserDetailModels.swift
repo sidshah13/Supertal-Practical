@@ -10,15 +10,12 @@ import UIKit
 
 enum UserDetail {
     // MARK: Use cases
-    
-    enum userDetail {
+    enum UserDetailEnum {
         struct Request {
         }
-        
         struct Response {
             var userDetail: UserListModel
         }
-        
         struct ViewModel {
             var userDetail: UserListModel
         }

@@ -25,7 +25,6 @@ class UserDetailRouter: NSObject, UserDetailRoutingLogic, UserDetailDataPassing 
 
 // MARK: Navigation to other screen
 
-
 // MARK: Passing data to other screen
 
 }

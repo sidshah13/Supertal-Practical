@@ -71,7 +71,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     func fetchUserDataFromServer() {
         let request = Home.UserList.Request(path: baseURL+userData)
-        interactor?.FetchUserList(request: request)
+        interactor?.fetchUserList(request: request)
     }
     
     // MARK: - display view model from HomePresenter

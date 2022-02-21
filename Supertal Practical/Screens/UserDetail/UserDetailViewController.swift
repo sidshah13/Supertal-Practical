@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 protocol UserDetailDisplayLogic: AnyObject {
-    func displayUserDetail(viewModel: UserDetail.userDetail.ViewModel)
+    func displayUserDetail(viewModel: UserDetail.UserDetailEnum.ViewModel)
 }
 
 class UserDetailViewController: UIViewController, UserDetailDisplayLogic {
@@ -67,14 +67,17 @@ class UserDetailViewController: UIViewController, UserDetailDisplayLogic {
     
     // MARK: - request data from UserDetailInteractor
     func showUserDetail() {
-        let request = UserDetail.userDetail.Request()
+        let request = UserDetail.UserDetailEnum.Request()
         interactor?.getUserDetail(request: request)
     }
     
     // MARK: - display view model from UserDetailPresenter
     
-    func displayUserDetail(viewModel: UserDetail.userDetail.ViewModel) {
+    func displayUserDetail(viewModel: UserDetail.UserDetailEnum.ViewModel) {
         self.lblUserName.text = viewModel.userDetail.userName
-        self.imgUserProfile.sd_setImage(with: URL(string:  viewModel.userDetail.userImage), placeholderImage: UIImage(systemName: "userloading"))
+        let imgUrl = URL(string:  viewModel.userDetail.userImage)
+        let placeHolderImage =  UIImage(systemName: "userloading")
+        self.imgUserProfile.sd_setImage(with: imgUrl,
+                                        placeholderImage: placeHolderImage)
     }
 }

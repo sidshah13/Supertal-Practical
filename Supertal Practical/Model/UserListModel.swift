@@ -10,7 +10,6 @@ import Foundation
 struct UserListModel: Decodable {
     let userName: String
     let userImage: String
-    
     enum CodingKeys: String, CodingKey {
         case userName = "name"
         case userImage = "avatar"

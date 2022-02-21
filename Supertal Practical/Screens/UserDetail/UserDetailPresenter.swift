@@ -9,7 +9,7 @@
 import UIKit
 
 protocol UserDetailPresentationLogic {
-    func presentUserDetail(response: UserDetail.userDetail.Response)
+    func presentUserDetail(response: UserDetail.UserDetailEnum.Response)
 }
 
 class UserDetailPresenter: UserDetailPresentationLogic {
@@ -18,8 +18,8 @@ class UserDetailPresenter: UserDetailPresentationLogic {
     // MARK: Parse and calc respnse from UserDetailInteractor
     // and send simple view model to UserDetailViewController to be displayed
 
-    func presentUserDetail(response: UserDetail.userDetail.Response) {
-        let viewModel = UserDetail.userDetail.ViewModel(userDetail: response.userDetail)
+    func presentUserDetail(response: UserDetail.UserDetailEnum.Response) {
+        let viewModel = UserDetail.UserDetailEnum.ViewModel(userDetail: response.userDetail)
         viewController?.displayUserDetail(viewModel: viewModel)
     }
 }
