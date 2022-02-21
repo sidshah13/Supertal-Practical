@@ -7,11 +7,9 @@
 //
 
 import UIKit
-
 protocol HomeDisplayLogic: AnyObject {
     func displayUserList(viewModel: Home.UserList.ViewModel)
 }
-
 class HomeViewController: UIViewController, HomeDisplayLogic {
     @IBOutlet weak var tblUserList: UITableView!
     var interactor: HomeBusinessLogic?
@@ -19,19 +17,15 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     var arrUsers = [UserListModel]()
     var reuseCellId = "HomeUserListTableViewCell"
     // MARK: Object lifecycle
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-    
-    // MARK: - Setup Clean Code Design Pattern 
-    
+    // MARK: - Setup Clean Code Design Pattern
     private func setup() {
         let viewController = self
         let interactor = HomeInteractor()
@@ -44,9 +38,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
     // MARK: - Routing
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
@@ -55,9 +47,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
             }
         }
     }
-    
     // MARK: - View lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let cellNib = UINib(nibName: reuseCellId, bundle: nil)
@@ -67,16 +57,12 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         self.tblUserList.dataSource = self
         fetchUserDataFromServer()
     }
-    
     // MARK: - request data from HomeInteractor
-    
     func fetchUserDataFromServer() {
         let request = Home.UserList.Request(path: baseURL+userData)
         interactor?.fetchUserList(request: request)
     }
-    
     // MARK: - display view model from HomePresenter
-    
     func displayUserList(viewModel: Home.UserList.ViewModel) {
         DispatchQueue.main.async {
             self.arrUsers.removeAll()
@@ -85,12 +71,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         }
     }
 }
-
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.arrUsers.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseCellId) as? HomeUserListTableViewCell
         cell?.setUserData(self.arrUsers[indexPath.row])
@@ -98,5 +82,5 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         router?.routeToUserDetailScreen()
-    }    
+    }
 }

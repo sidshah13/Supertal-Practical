@@ -15,7 +15,6 @@ import UIKit
 protocol HomeDataPassing {
     var dataStore: HomeDataStore? { get }
 }
-
 class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
     weak var viewController: HomeViewController?
     var dataStore: HomeDataStore?
@@ -30,18 +29,14 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
                             destination: destinationVC!)
     }
     // MARK: Navigation to other screen
-    
     func navigateToShowOrder(source: HomeViewController,
                              destination: UserDetailViewController) {
         source.show(destination, sender: nil)
     }
-    
     // MARK: Passing data to other screen
     func passDataToUserDetail(source: HomeDataStore,
-                              destination: inout UserDetailDataStore)
-    {
+                              destination: inout UserDetailDataStore) {
         let selectedRow = viewController?.tblUserList.indexPathForSelectedRow?.row
         destination.userDetail = source.userList?[selectedRow!]
     }
 }
-    

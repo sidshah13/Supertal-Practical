@@ -9,8 +9,8 @@
 import UIKit
 import Alamofire
 class HomeWorker {
-    
-    func getUserDetails(request: String, completionHandler: @escaping ([UserListModel]) -> Void) {
+    func getUserDetails(request: String,
+                        completionHandler: @escaping ([UserListModel]) -> Void) {
         var arrUser = [UserListModel]()
         if let url = URL(string: request) {
             AF.request(url,
@@ -43,11 +43,4 @@ class HomeWorker {
             completionHandler(arrUser)
         }
     }
-    func doSomeWork() {
-        
-    }
-//    
-//    func doSomeOtherWork() {
-//
-//    }
 }

@@ -110,14 +110,11 @@ extension UIColor {
             alpha: CGFloat(1.0)
         )
     }
-    
     static func random() -> UIColor {
-        return UIColor(
-            red:   .random(),
-            green: .random(),
-            blue:  .random(),
-            alpha: 1.0
-        )
+        return UIColor(red: .random(),
+                       green: .random(),
+                       blue: .random(),
+                       alpha: 1.0)
     }
     var isDarkColor: Bool {
         var r, g, b, a: CGFloat

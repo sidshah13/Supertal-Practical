@@ -75,7 +75,7 @@ class UserDetailViewController: UIViewController, UserDetailDisplayLogic {
     
     func displayUserDetail(viewModel: UserDetail.UserDetailEnum.ViewModel) {
         self.lblUserName.text = viewModel.userDetail.userName
-        let imgUrl = URL(string:  viewModel.userDetail.userImage)
+        let imgUrl = URL(string: viewModel.userDetail.userImage)
         let placeHolderImage =  UIImage(systemName: "userloading")
         self.imgUserProfile.sd_setImage(with: imgUrl,
                                         placeholderImage: placeHolderImage)

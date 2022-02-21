@@ -9,7 +9,6 @@
 import UIKit
 
 enum Home {
-    
     // MARK: Use cases
     enum UserList {
         struct Request {
