@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E04D7CE2D6AEFCD2655AE47 /* Pods_Supertal_Practical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFE4116C7F116699FC3C48C /* Pods_Supertal_Practical.framework */; };
+		A79B836727C39E8500D212D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B836627C39E8500D212D0 /* AppDelegate.swift */; };
+		A79B836927C39E8500D212D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B836827C39E8500D212D0 /* SceneDelegate.swift */; };
+		A79B836E27C39E8500D212D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79B836C27C39E8500D212D0 /* Main.storyboard */; };
+		A79B837027C39E8900D212D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B836F27C39E8900D212D0 /* Assets.xcassets */; };
+		A79B837327C39E8900D212D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79B837127C39E8900D212D0 /* LaunchScreen.storyboard */; };
+		A79B837E27C39E8A00D212D0 /* Supertal_PracticalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B837D27C39E8A00D212D0 /* Supertal_PracticalTests.swift */; };
+		A79B838827C39E8A00D212D0 /* Supertal_PracticalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B838727C39E8A00D212D0 /* Supertal_PracticalUITests.swift */; };
+		A79B838A27C39E8A00D212D0 /* Supertal_PracticalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B838927C39E8A00D212D0 /* Supertal_PracticalUITestsLaunchTests.swift */; };
+		A79B839C27C39ED300D212D0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B839627C39ED200D212D0 /* HomePresenter.swift */; };
+		A79B839D27C39ED300D212D0 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B839727C39ED200D212D0 /* HomeWorker.swift */; };
+		A79B839E27C39ED300D212D0 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B839827C39ED200D212D0 /* HomeRouter.swift */; };
+		A79B839F27C39ED300D212D0 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B839927C39ED200D212D0 /* HomeModels.swift */; };
+		A79B83A027C39ED300D212D0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B839A27C39ED300D212D0 /* HomeViewController.swift */; };
+		A79B83A127C39ED300D212D0 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B839B27C39ED300D212D0 /* HomeInteractor.swift */; };
+		A79B83A527C3A2FC00D212D0 /* HomeUserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B83A327C3A2FC00D212D0 /* HomeUserListTableViewCell.swift */; };
+		A79B83A627C3A2FC00D212D0 /* HomeUserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79B83A427C3A2FC00D212D0 /* HomeUserListTableViewCell.xib */; };
+		A79B83A927C3AC2300D212D0 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B83A827C3AC2300D212D0 /* Extentions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A79B837A27C39E8A00D212D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79B835B27C39E8500D212D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A79B836227C39E8500D212D0;
+			remoteInfo = "Supertal Practical";
+		};
+		A79B838427C39E8A00D212D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79B835B27C39E8500D212D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A79B836227C39E8500D212D0;
+			remoteInfo = "Supertal Practical";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40DFE2BF197D0565E1945419 /* Pods-Supertal Practical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Supertal Practical.release.xcconfig"; path = "Target Support Files/Pods-Supertal Practical/Pods-Supertal Practical.release.xcconfig"; sourceTree = "<group>"; };
+		6FFE4116C7F116699FC3C48C /* Pods_Supertal_Practical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Supertal_Practical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79B836327C39E8500D212D0 /* Supertal Practical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Supertal Practical.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79B836627C39E8500D212D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A79B836827C39E8500D212D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A79B836D27C39E8500D212D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A79B836F27C39E8900D212D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A79B837227C39E8900D212D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A79B837427C39E8900D212D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79B837927C39E8A00D212D0 /* Supertal PracticalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Supertal PracticalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79B837D27C39E8A00D212D0 /* Supertal_PracticalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supertal_PracticalTests.swift; sourceTree = "<group>"; };
+		A79B838327C39E8A00D212D0 /* Supertal PracticalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Supertal PracticalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79B838727C39E8A00D212D0 /* Supertal_PracticalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supertal_PracticalUITests.swift; sourceTree = "<group>"; };
+		A79B838927C39E8A00D212D0 /* Supertal_PracticalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supertal_PracticalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A79B839627C39ED200D212D0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		A79B839727C39ED200D212D0 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		A79B839827C39ED200D212D0 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		A79B839927C39ED200D212D0 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		A79B839A27C39ED300D212D0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A79B839B27C39ED300D212D0 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		A79B83A327C3A2FC00D212D0 /* HomeUserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserListTableViewCell.swift; sourceTree = "<group>"; };
+		A79B83A427C3A2FC00D212D0 /* HomeUserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeUserListTableViewCell.xib; sourceTree = "<group>"; };
+		A79B83A827C3AC2300D212D0 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		D5453E5A53825824F83CF218 /* Pods-Supertal Practical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Supertal Practical.debug.xcconfig"; path = "Target Support Files/Pods-Supertal Practical/Pods-Supertal Practical.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A79B836027C39E8500D212D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E04D7CE2D6AEFCD2655AE47 /* Pods_Supertal_Practical.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B837627C39E8A00D212D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B838027C39E8A00D212D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27523D481BA2CF61EF66A5DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FFE4116C7F116699FC3C48C /* Pods_Supertal_Practical.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73F26CA72F2D501BEB884DC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5453E5A53825824F83CF218 /* Pods-Supertal Practical.debug.xcconfig */,
+				40DFE2BF197D0565E1945419 /* Pods-Supertal Practical.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A79B835A27C39E8500D212D0 = {
+			isa = PBXGroup;
+			children = (
+				A79B836527C39E8500D212D0 /* Supertal Practical */,
+				A79B837C27C39E8A00D212D0 /* Supertal PracticalTests */,
+				A79B838627C39E8A00D212D0 /* Supertal PracticalUITests */,
+				A79B836427C39E8500D212D0 /* Products */,
+				73F26CA72F2D501BEB884DC0 /* Pods */,
+				27523D481BA2CF61EF66A5DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A79B836427C39E8500D212D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A79B836327C39E8500D212D0 /* Supertal Practical.app */,
+				A79B837927C39E8A00D212D0 /* Supertal PracticalTests.xctest */,
+				A79B838327C39E8A00D212D0 /* Supertal PracticalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A79B836527C39E8500D212D0 /* Supertal Practical */ = {
+			isa = PBXGroup;
+			children = (
+				A79B83A727C3ABC800D212D0 /* Global */,
+				A79B83A227C39F5F00D212D0 /* Home */,
+				A79B836627C39E8500D212D0 /* AppDelegate.swift */,
+				A79B836827C39E8500D212D0 /* SceneDelegate.swift */,
+				A79B836C27C39E8500D212D0 /* Main.storyboard */,
+				A79B836F27C39E8900D212D0 /* Assets.xcassets */,
+				A79B837127C39E8900D212D0 /* LaunchScreen.storyboard */,
+				A79B837427C39E8900D212D0 /* Info.plist */,
+			);
+			path = "Supertal Practical";
+			sourceTree = "<group>";
+		};
+		A79B837C27C39E8A00D212D0 /* Supertal PracticalTests */ = {
+			isa = PBXGroup;
+			children = (
+				A79B837D27C39E8A00D212D0 /* Supertal_PracticalTests.swift */,
+			);
+			path = "Supertal PracticalTests";
+			sourceTree = "<group>";
+		};
+		A79B838627C39E8A00D212D0 /* Supertal PracticalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A79B838727C39E8A00D212D0 /* Supertal_PracticalUITests.swift */,
+				A79B838927C39E8A00D212D0 /* Supertal_PracticalUITestsLaunchTests.swift */,
+			);
+			path = "Supertal PracticalUITests";
+			sourceTree = "<group>";
+		};
+		A79B83A227C39F5F00D212D0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A79B839627C39ED200D212D0 /* HomePresenter.swift */,
+				A79B839727C39ED200D212D0 /* HomeWorker.swift */,
+				A79B839827C39ED200D212D0 /* HomeRouter.swift */,
+				A79B839927C39ED200D212D0 /* HomeModels.swift */,
+				A79B839A27C39ED300D212D0 /* HomeViewController.swift */,
+				A79B839B27C39ED300D212D0 /* HomeInteractor.swift */,
+				A79B83A327C3A2FC00D212D0 /* HomeUserListTableViewCell.swift */,
+				A79B83A427C3A2FC00D212D0 /* HomeUserListTableViewCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A79B83A727C3ABC800D212D0 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				A79B83A827C3AC2300D212D0 /* Extentions.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A79B836227C39E8500D212D0 /* Supertal Practical */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79B838D27C39E8A00D212D0 /* Build configuration list for PBXNativeTarget "Supertal Practical" */;
+			buildPhases = (
+				9DE6060A00D80EFA0C2A120A /* [CP] Check Pods Manifest.lock */,
+				A79B835F27C39E8500D212D0 /* Sources */,
+				A79B836027C39E8500D212D0 /* Frameworks */,
+				A79B836127C39E8500D212D0 /* Resources */,
+				4A8FC9AFBB354152082B9C31 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Supertal Practical";
+			productName = "Supertal Practical";
+			productReference = A79B836327C39E8500D212D0 /* Supertal Practical.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A79B837827C39E8A00D212D0 /* Supertal PracticalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79B839027C39E8A00D212D0 /* Build configuration list for PBXNativeTarget "Supertal PracticalTests" */;
+			buildPhases = (
+				A79B837527C39E8A00D212D0 /* Sources */,
+				A79B837627C39E8A00D212D0 /* Frameworks */,
+				A79B837727C39E8A00D212D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A79B837B27C39E8A00D212D0 /* PBXTargetDependency */,
+			);
+			name = "Supertal PracticalTests";
+			productName = "Supertal PracticalTests";
+			productReference = A79B837927C39E8A00D212D0 /* Supertal PracticalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A79B838227C39E8A00D212D0 /* Supertal PracticalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79B839327C39E8A00D212D0 /* Build configuration list for PBXNativeTarget "Supertal PracticalUITests" */;
+			buildPhases = (
+				A79B837F27C39E8A00D212D0 /* Sources */,
+				A79B838027C39E8A00D212D0 /* Frameworks */,
+				A79B838127C39E8A00D212D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A79B838527C39E8A00D212D0 /* PBXTargetDependency */,
+			);
+			name = "Supertal PracticalUITests";
+			productName = "Supertal PracticalUITests";
+			productReference = A79B838327C39E8A00D212D0 /* Supertal PracticalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A79B835B27C39E8500D212D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = SidSha;
+				TargetAttributes = {
+					A79B836227C39E8500D212D0 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					A79B837827C39E8A00D212D0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A79B836227C39E8500D212D0;
+					};
+					A79B838227C39E8A00D212D0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A79B836227C39E8500D212D0;
+					};
+				};
+			};
+			buildConfigurationList = A79B835E27C39E8500D212D0 /* Build configuration list for PBXProject "Supertal Practical" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A79B835A27C39E8500D212D0;
+			productRefGroup = A79B836427C39E8500D212D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A79B836227C39E8500D212D0 /* Supertal Practical */,
+				A79B837827C39E8A00D212D0 /* Supertal PracticalTests */,
+				A79B838227C39E8A00D212D0 /* Supertal PracticalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A79B836127C39E8500D212D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79B837327C39E8900D212D0 /* LaunchScreen.storyboard in Resources */,
+				A79B83A627C3A2FC00D212D0 /* HomeUserListTableViewCell.xib in Resources */,
+				A79B837027C39E8900D212D0 /* Assets.xcassets in Resources */,
+				A79B836E27C39E8500D212D0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B837727C39E8A00D212D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B838127C39E8A00D212D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A8FC9AFBB354152082B9C31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Supertal Practical/Pods-Supertal Practical-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Supertal Practical/Pods-Supertal Practical-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Supertal Practical/Pods-Supertal Practical-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DE6060A00D80EFA0C2A120A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Supertal Practical-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A79B835F27C39E8500D212D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79B839E27C39ED300D212D0 /* HomeRouter.swift in Sources */,
+				A79B836727C39E8500D212D0 /* AppDelegate.swift in Sources */,
+				A79B83A927C3AC2300D212D0 /* Extentions.swift in Sources */,
+				A79B83A027C39ED300D212D0 /* HomeViewController.swift in Sources */,
+				A79B83A527C3A2FC00D212D0 /* HomeUserListTableViewCell.swift in Sources */,
+				A79B836927C39E8500D212D0 /* SceneDelegate.swift in Sources */,
+				A79B839D27C39ED300D212D0 /* HomeWorker.swift in Sources */,
+				A79B83A127C39ED300D212D0 /* HomeInteractor.swift in Sources */,
+				A79B839C27C39ED300D212D0 /* HomePresenter.swift in Sources */,
+				A79B839F27C39ED300D212D0 /* HomeModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B837527C39E8A00D212D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79B837E27C39E8A00D212D0 /* Supertal_PracticalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B837F27C39E8A00D212D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79B838A27C39E8A00D212D0 /* Supertal_PracticalUITestsLaunchTests.swift in Sources */,
+				A79B838827C39E8A00D212D0 /* Supertal_PracticalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A79B837B27C39E8A00D212D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A79B836227C39E8500D212D0 /* Supertal Practical */;
+			targetProxy = A79B837A27C39E8A00D212D0 /* PBXContainerItemProxy */;
+		};
+		A79B838527C39E8A00D212D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A79B836227C39E8500D212D0 /* Supertal Practical */;
+			targetProxy = A79B838427C39E8A00D212D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A79B836C27C39E8500D212D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A79B836D27C39E8500D212D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A79B837127C39E8900D212D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A79B837227C39E8900D212D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A79B838B27C39E8A00D212D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A79B838C27C39E8A00D212D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A79B838E27C39E8A00D212D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5453E5A53825824F83CF218 /* Pods-Supertal Practical.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V45PNQ87F8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Supertal Practical/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sidsha.Supertal-Practical";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A79B838F27C39E8A00D212D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40DFE2BF197D0565E1945419 /* Pods-Supertal Practical.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V45PNQ87F8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Supertal Practical/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sidsha.Supertal-Practical";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A79B839127C39E8A00D212D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V45PNQ87F8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sidsha.Supertal-PracticalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Supertal Practical.app/Supertal Practical";
+			};
+			name = Debug;
+		};
+		A79B839227C39E8A00D212D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V45PNQ87F8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sidsha.Supertal-PracticalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Supertal Practical.app/Supertal Practical";
+			};
+			name = Release;
+		};
+		A79B839427C39E8A00D212D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V45PNQ87F8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sidsha.Supertal-PracticalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Supertal Practical";
+			};
+			name = Debug;
+		};
+		A79B839527C39E8A00D212D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V45PNQ87F8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sidsha.Supertal-PracticalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Supertal Practical";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A79B835E27C39E8500D212D0 /* Build configuration list for PBXProject "Supertal Practical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79B838B27C39E8A00D212D0 /* Debug */,
+				A79B838C27C39E8A00D212D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79B838D27C39E8A00D212D0 /* Build configuration list for PBXNativeTarget "Supertal Practical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79B838E27C39E8A00D212D0 /* Debug */,
+				A79B838F27C39E8A00D212D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79B839027C39E8A00D212D0 /* Build configuration list for PBXNativeTarget "Supertal PracticalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79B839127C39E8A00D212D0 /* Debug */,
+				A79B839227C39E8A00D212D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79B839327C39E8A00D212D0 /* Build configuration list for PBXNativeTarget "Supertal PracticalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79B839427C39E8A00D212D0 /* Debug */,
+				A79B839527C39E8A00D212D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A79B835B27C39E8500D212D0 /* Project object */;
+}
