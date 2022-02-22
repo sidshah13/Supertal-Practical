@@ -7,7 +7,7 @@
 
 
 *.pbxuser
-*.xcworkspace
+#*.xcworkspace
 *.xccheckout
 xcuserdata
 Pods
