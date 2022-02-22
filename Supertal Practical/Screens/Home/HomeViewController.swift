@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reachability
 protocol HomeDisplayLogic: AnyObject {
     func displayUserList(viewModel: Home.UserList.ViewModel)
 }
@@ -59,11 +60,17 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     }
     // MARK: - request data from HomeInteractor
     func fetchUserDataFromServer() {
-        let request = Home.UserList.Request(path: baseURL+userData)
-        interactor?.fetchUserList(request: request)
+        if ConnectionManager.shared.hasConnectivity() {
+            Indicator.sharedInstance.showIndicator()
+            let request = Home.UserList.Request(path: baseURL+userData)
+            interactor?.fetchUserList(request: request)
+        } else {
+            self.view.toastView(messsage: "Please check Internet Connection")
+        }
     }
     // MARK: - display view model from HomePresenter
     func displayUserList(viewModel: Home.UserList.ViewModel) {
+        Indicator.sharedInstance.hideIndicator()
         DispatchQueue.main.async {
             self.arrUsers.removeAll()
             self.arrUsers = viewModel.userDetails
