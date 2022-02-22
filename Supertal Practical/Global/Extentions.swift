@@ -95,6 +95,21 @@ extension UIView {
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.layer.shadowRadius = 5
     }
+    func toastView(messsage : String) {
+        let toastLabel = UILabel(frame: CGRect(x: self.frame.size.width/2 - 150, y: self.frame.size.height-100, width: 300,  height : 35))
+        toastLabel.backgroundColor = .black
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = NSTextAlignment.center;
+        self.addSubview(toastLabel)
+        toastLabel.text = messsage
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: UIView.AnimationOptions.curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+            
+        })
+    }
 }
 extension UIColor {
     /**
