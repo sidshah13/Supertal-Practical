@@ -18,4 +18,4 @@ jobs:
     - name: Pod Install
       run: pod install
     - name: Build App
-      run: xcodebuild clean test -workspace 'Supertal Practical.xcworkspace' -scheme 'Supertal Practical' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest'
+      run: xcodebuild -workspace 'Supertal Practical.xcworkspace' -scheme 'Supertal Practical' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest'
