@@ -10,7 +10,6 @@ jobs:
   build:
 
     runs-on: macOS-latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Force Xcode 13.2.1
